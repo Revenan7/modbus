@@ -1,29 +1,42 @@
 # modbus
 
 ## Ruuun
-1) откройте консоль Git Bash и скопируйте репозиторий в папку
+откройте консоль и сокпируйте проект
 ```bash
 git clone https://github.com/Revenan7/modbus.git
 ```
-2) зайдите в директорию проекта
+
+## Использование
+1) зайдите в CMD и зайдите в консоль контейнера:
+```
+docker exec -it modbus-modbus-client-1 /bin/bash
+```
+2) запустите файл
+```
+./start
+```
+
+
+## Выгрузка данных
+1) откройте консоль Git Bash и зайдите в директорию проекта
 ```
 cd modbus
 ```
-3) выполните:
+2) выполните:
 ```
 docker-compose up --build -d
 ```
-4) зайдите в терминал запущенного контейнера modbus-dbpostgres-1
+3) зайдите в терминал запущенного контейнера modbus-dbpostgres-1
 ```
 docker exec -it modbus-dbpostgres-1 bash
 ```
-5) выполните:
+4) выполните:
 ```
 psql -U postgres -d postgres -c "Copy (Select * From responses) To STDOUT With CSV HEADER DELIMITER ',';" > db.csv
 ```
-6) нажмите Ctrl + D или впишите exit, чтобы выйти из консоли контейнера
+5) нажмите Ctrl + D или впишите exit, чтобы выйти из консоли контейнера
 
-7) впишите
+6) впишите
 ```
 docker cp modbus-dbpostgres-1:/db.csv ./db.csv
 ```
