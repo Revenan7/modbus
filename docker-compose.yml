@@ -1,0 +1,44 @@
+services:
+  modbus-server:
+    image: oitc/modbus-server
+    ports:
+      - "5020:5020"  # Пробрасываем порт 5020 на хост
+    networks:
+      - modbus-network
+    volumes:
+      - ./server.json:/server_config.json:ro  # Привязываем конфигурационный файл
+    command: -f /server_config.json  # Указываем серверу использовать этот файл
+
+  modbus-client:
+    build:
+      context: .  # Указываем путь к текущей папке, где находится Dockerfile.client
+      dockerfile: Dockerfile.client  # Указываем имя Dockerfile для клиента
+    depends_on:
+      - modbus-server  # Говорим, что клиент зависит от сервера
+      - dbpostgres  # Говорим, что клиент также зависит от PostgreSQL
+    networks:
+      - modbus-network
+    stdin_open: true
+    tty: true
+
+      
+
+  dbpostgres:
+    image: postgres:latest  # Используем официальный образ PostgreSQL
+    environment:
+      POSTGRES_USER: postgres  # Задаем пользователя базы данных
+      POSTGRES_PASSWORD: postgres  # Задаем пароль
+      POSTGRES_DB: postgres  # Имя базы данных
+    ports:
+      - "5439:5439"  # Пробрасываем порт 5439
+    networks:
+      - modbus-network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Сохраняем данные вне контейнера
+
+networks:
+  modbus-network:
+    driver: bridge
+
+volumes:
+  postgres_data:  # Создаем volume для данных PostgreSQL
