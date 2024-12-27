@@ -15,6 +15,8 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 ```
 ./start
 ```
+для виртуального теста предоставлен modbus-server, доступный по IP: 172.19.0.2 PORT: 5020
+его конфигурация в файле server.json
 
 
 ## Выгрузка данных
