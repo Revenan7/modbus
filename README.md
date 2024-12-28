@@ -24,10 +24,45 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 ```
 ./start
 ```
-![image](https://github.com/user-attachments/assets/f06b1a45-7ae1-4646-a8e6-e5f34364a7c1)
 
-для виртуального теста предоставлен modbus-server(устройство/slave), IP: посмотрите в контейнере PORT: 5020
-его конфигурация в файле server.json
+
+## про команды
+![image](https://github.com/user-attachments/assets/f4e90ced-3507-43fe-be63-04ac29320c6c)
+1) создание новой команды
+![image](https://github.com/user-attachments/assets/4c27ed6c-36de-4183-91be-bb02f6a01add)
+первая цифра - код фунцкии
+1 - Read Coil Status
+2 - Read Input Status
+3 - Read Holding Registers
+4 - Read Input Registers
+
+вторая цифра - с какого регистра считывать
+
+третья цифра - сколько регистров считывать
+
+пример:
+
+4 9 1
+
+программа создаст функцию, которая считывает Input Register по адресу 9
+
+2) запуск команды по ID
+
+  а) введите IP адрес устройства, доступный в локальной сети
+  б) введите порт этого устройства
+  в) введите номер команды (доступные команды, которые вы создали можно посмотреть)
+  если всё прошло успешно:
+  ![image](https://github.com/user-attachments/assets/a64af077-3360-4a51-a036-0eabc1756304)
+  (данная функция, прочла Input Registers по адрессу 9, в устройстве доступный по IP 172.18.0.3 и порту 5020)
+
+3) вывод всех доступных команд (которые вы создали ранее)
+пример:
+![image](https://github.com/user-attachments/assets/f2847aef-06d4-4c9c-b97e-3291c66d15ef)
+
+
+4) вывод логов, всех отрпавленых пакетов и принятых соответсвенно
+пример:
+![image](https://github.com/user-attachments/assets/d3923b77-345c-4fa7-921a-04ee5b65b1ca)
 
 
 ## Выгрузка данных
