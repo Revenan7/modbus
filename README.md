@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2bef9528-638c-4fc4-8020-1d15c2ce6937)# modbus
+# modbus
 
 ## Ruuun
 1) откройте CMD и сокпируйте проект
