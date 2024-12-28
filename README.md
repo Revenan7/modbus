@@ -33,6 +33,7 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 ![image](https://github.com/user-attachments/assets/4c27ed6c-36de-4183-91be-bb02f6a01add)
 
 первая цифра - код фунцкии
+```
 1 - Read Coil Status
 
 2 - Read Input Status
@@ -40,7 +41,7 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 3 - Read Holding Registers
 
 4 - Read Input Registers
-
+```
 вторая цифра - с какого регистра считывать
 
 третья цифра - сколько регистров считывать
