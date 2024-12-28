@@ -1,7 +1,7 @@
 # modbus
 
 ## Ruuun
-1) откройте CMD и сокпируйте проект
+1) откройте CMD и скопируйте проект
 ```
 git clone https://github.com/Revenan7/modbus.git
 ```
