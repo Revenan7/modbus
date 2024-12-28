@@ -1,4 +1,4 @@
-# modbus
+![image](https://github.com/user-attachments/assets/2bef9528-638c-4fc4-8020-1d15c2ce6937)# modbus
 
 ## Ruuun
 1) откройте CMD и сокпируйте проект
@@ -24,7 +24,9 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 ```
 ./start
 ```
-для виртуального теста предоставлен modbus-server, доступный по IP: 172.19.0.2 PORT: 5020
+![image](https://github.com/user-attachments/assets/f06b1a45-7ae1-4646-a8e6-e5f34364a7c1)
+
+для виртуального теста предоставлен modbus-server, IP: посмотрите в контейнере PORT: 5020
 его конфигурация в файле server.json
 
 
