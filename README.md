@@ -26,7 +26,7 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 ```
 ![image](https://github.com/user-attachments/assets/f06b1a45-7ae1-4646-a8e6-e5f34364a7c1)
 
-для виртуального теста предоставлен modbus-server, IP: посмотрите в контейнере PORT: 5020
+для виртуального теста предоставлен modbus-server(устройство/slave), IP: посмотрите в контейнере PORT: 5020
 его конфигурация в файле server.json
 
 
