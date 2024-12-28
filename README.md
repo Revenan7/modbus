@@ -97,3 +97,8 @@ psql -U postgres -d postgres -c "Copy (Select * From responses) To STDOUT With C
 ```
 docker cp modbus-dbpostgres-1:/db.csv ./db.csv
 ```
+
+в папке проекта создастся файл
+
+![image](https://github.com/user-attachments/assets/28b18f63-c835-43fc-a007-8df2ffd11289)
+
