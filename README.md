@@ -64,15 +64,17 @@ docker exec -it modbus-modbus-client-1 /bin/bash
   
   ![image](https://github.com/user-attachments/assets/a64af077-3360-4a51-a036-0eabc1756304)
   
-  (данная функция, прочла Input Registers по адрессу 9, в устройстве доступный по IP 172.18.0.3 и порту 5020)
+  (данная функция, прочла Input Register по адрессу 9, в устройстве доступный по IP 172.18.0.3 и порту 5020)
 
 ## 3) вывод всех доступных команд (которые вы создали ранее)
 пример:
+
 ![image](https://github.com/user-attachments/assets/f2847aef-06d4-4c9c-b97e-3291c66d15ef)
 
 
 ## 4) вывод логов, всех отрпавленых пакетов и принятых соответсвенно
 пример:
+
 ![image](https://github.com/user-attachments/assets/d3923b77-345c-4fa7-921a-04ee5b65b1ca)
 
 
