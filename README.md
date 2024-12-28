@@ -29,7 +29,9 @@ docker exec -it modbus-modbus-client-1 /bin/bash
 ## про команды
 ![image](https://github.com/user-attachments/assets/f4e90ced-3507-43fe-be63-04ac29320c6c)
 1) создание новой команды
+   
 ![image](https://github.com/user-attachments/assets/4c27ed6c-36de-4183-91be-bb02f6a01add)
+
 первая цифра - код фунцкии
 1 - Read Coil Status
 2 - Read Input Status
