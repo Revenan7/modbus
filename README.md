@@ -1,5 +1,7 @@
 # modbus
 
+Совместная работа с https://github.com/kreipikc
+
 ## Ruuun
 1) откройте CMD и скопируйте проект
 ```
