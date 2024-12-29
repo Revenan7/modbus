@@ -20,6 +20,7 @@ docker-compose up --build -d
 ```
 docker exec -it modbus-modbus-client-1 /bin/bash
 ```
+*убедитесь, что контейнер modbus-modbus-client-1 запущен в докере
 2) запустите файл
 ```
 ./start
