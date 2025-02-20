@@ -15,19 +15,23 @@ cd modbus
 ```
 docker-compose up --build -d
 ```
+4) убедитесь, что контейнер с ьазой данных собрался и запустился:
+
+![image](https://github.com/user-attachments/assets/7392f97a-0499-4af1-9c96-774377b4b43e)
+
+
 у вас должен быть запущен докер*
 
 ## Использование
-1) зайдите в CMD и зайдите в консоль контейнера:
-```
-docker exec -it modbus-modbus-client-1 /bin/bash
-```
-*убедитесь, что контейнер modbus-modbus-client-1 запущен в докере
+1) разархивируйте архив:
+
+![image](https://github.com/user-attachments/assets/ccb46992-538f-4c85-8ca0-543ee3c7e621)
+
 
 2) запустите файл
-```
-./start
-```
+
+![image](https://github.com/user-attachments/assets/b33a0173-49e3-45e1-9c12-af8e6045b92e)
+
 
 
 ## про команды
@@ -66,9 +70,10 @@ docker exec -it modbus-modbus-client-1 /bin/bash
   
   если всё прошло успешно:
   
-  ![image](https://github.com/user-attachments/assets/a64af077-3360-4a51-a036-0eabc1756304)
+ ![image](https://github.com/user-attachments/assets/8046a679-d66f-4f52-aadf-5ed9898619e9)
+
   
-  (данная функция, прочла Input Register по адрессу 9, в устройстве доступный по IP 172.18.0.3 и порту 5020)
+  (данная функция, прочла Input Register по адрессу 9, в устройстве доступный по IP 127.0.0.1 и порту 502)
 
 ## 3) вывод всех доступных команд (которые вы создали ранее)
 пример:
