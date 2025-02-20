@@ -32,7 +32,7 @@ docker-compose up --build -d
 
 ![image](https://github.com/user-attachments/assets/b33a0173-49e3-45e1-9c12-af8e6045b92e)
 
-
+*если контейнер с базой данных не запущен, консоль сразу же закроется с ошибкой
 
 ## про команды
 ![image](https://github.com/user-attachments/assets/f4e90ced-3507-43fe-be63-04ac29320c6c)
