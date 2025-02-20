@@ -1,0 +1,20 @@
+services:
+  dbpostgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5439:5432"
+    networks:
+      - modbus-network 
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  modbus-network:
+    driver: bridge 
+
+volumes:
+  postgres_data:
